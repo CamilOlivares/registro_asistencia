@@ -1,0 +1,219 @@
+/* Estilos para el cuerpo de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Altura del 80% del viewport height */
+    margin: 20px 0; /* Margen superior e inferior de 20px, margen izquierdo y derecho de 0 */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto o una fuente sans-serif genérica */
+    background-color: #f0f0f0; /* Color de fondo */
+}
+
+/* Estilos para el título principal */
+h1 {
+    margin-top: 40px; /* Margen superior de 40px para separar del borde superior */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para la cabecera */
+header {
+    text-align: center;
+    padding: 20px; /* Relleno de 20px */
+    border-bottom: 2px #eee; /* Borde inferior de 2px y color #eee */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+}
+
+/* Estilos para enlaces */
+h1, a {
+    margin: 10px 0; /* Margen superior e inferior de 10px y margen izquierdo y derecho de 0 */
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: blue; /* Color azul para el enlace */
+}
+
+a:hover {
+    color: red; /* Color rojo cuando se pasa el ratón sobre el enlace */
+}
+
+/* Estilos para campos de entrada de tipo email y password */
+input[type="text"], input[type="email"], input[type="password"] {
+    outline: none; /* Quita el contorno al enfocar */
+    padding: 20px; /* Relleno de 20px */
+    display: block; /* Hace que los elementos sean bloque para respetar el ancho */
+    width: 300px; /* Ancho de 300px */
+    border-radius: 3px; /* Bordes redondeados de 3px */
+    border: 1px solid #eee; /* Borde de 1px sólido con color #eee */
+    margin: 20px auto; /* Margen de 20px en la parte superior e inferior, y auto en los lados para centrar */
+}
+
+/* Estilos para el botón de envío */
+input[type="submit"] {
+    padding: 10px; /* Relleno de 10px */
+    color: #fff; /* Color del texto blanco */
+    background: #0098cb; /* Fondo azul */
+    width: 320px; /* Ancho de 320px */
+    margin-top: 0; /* Margen superior de 0 */
+    border: 0; /* Borde de 0 (sin borde) */
+    border-radius: 3px; /* Bordes redondeados de 3px */
+    cursor: pointer; /* Cursor de tipo puntero */
+}
+
+/* Estilos para el botón de envío al pasar el ratón */
+input[type="submit"]:hover {
+    background-color: darkcyan; /* Cambia el fondo al pasar el ratón */
+}
+
+/* Estilos para enlaces dentro de la cabecera */
+header a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #333; /* Color del texto #333 */
+}
+
+
+/* Estilo Para generar 2 columnas en la Pagina de Profile.php*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.data-view {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.data-view h2 {
+    margin-bottom: 10px;
+}
+
+.data-view table {
+    width: 100%;
+}
+
+.data-view table td {
+    padding: 5px;
+}
+
+.form-view {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-view h2 {
+    margin-bottom: 10px;
+}
+
+.form-view label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-view input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.form-view input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Estilo Para generar 2 columnas en la Pagina de signup.php*/
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.form-button {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+
+}
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

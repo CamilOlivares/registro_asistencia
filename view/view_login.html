@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+<?php require "view/header.php" // Requiere el encabezado ?>
+
+<h1>Login</h1>
+<span>o <a href="signup.php">SingUp</a></span> <!-- Enlace para registrarse -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconexión a Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconexión a Google Fonts con crossorigin -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Roboto -->
+<link rel="stylesheet" href="assets\css\style.css"> <!-- Enlace al archivo CSS -->
+
+<!-- Formulario de inicio de sesión -->
+<form action="login.php" method="post">
+    <input type="email" name="email" id="Email" placeholder="Correo electrónico"> <!-- Campo para el correo electrónico -->
+    <input type="password" name="password" id="Password" placeholder="Contraseña"> <!-- Campo para la contraseña -->
+    <input type="submit" value="Enviar"> <!-- Botón de enviar -->
+</form>
+
+</body>
+</html>

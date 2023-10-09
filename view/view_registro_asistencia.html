@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Asistencia</title>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Enlace al archivo CSS -->
+    
+</head>
+<body>
+    <h1>Registro de Entrada y Salida</h1>
+    
+
+    <div class="container">
+        <!-- Sección para los botones de registro de entrada y salida -->
+        <div class="column">
+            <h2>Registro de Entrada/Salida</h2>
+            <form action="controller/procesar_registro.php" method="post">
+                <button type="submit" name="tipo_registro" value="Entrada">Registrar Entrada</button>
+            </form>
+
+            <form action="controller/procesar_registro.php" method="post">
+                <button type="submit" name="tipo_registro" value="Salida">Registrar Salida</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="view/historial_usuarios.php">
+        <button>Ir a mi Historial</button>
+          
+        </tbody>
+    </table>
+
+    <a href="../profile.php">
+        <button>Ir a Mi Perfil</button>
+    </a>
+
+    <!-- Botón de logout (Cerrar sesión) -->
+    <?php require "view/cerrar_sesion.php" ?>
+
+</body>
+</html>

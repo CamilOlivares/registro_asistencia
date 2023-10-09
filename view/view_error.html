@@ -1,0 +1,28 @@
+<?php
+
+// Obtener el mensaje de error de la URL o establecer uno predeterminado
+$error_message = isset($_GET['error_message']) ? htmlspecialchars($_GET['error_message']) : "Ocurrió un error.";
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Colegio Maria Auxiliadora</title>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <?php require "view/header.php" ?> <!-- Incluye el encabezado común -->
+
+    <!-- Contenedor para mostrar el mensaje de error -->
+    <div class="error-container">
+        <h1>Error</h1>
+        <p><?php echo $error_message; ?></p> <!-- Mostrar el mensaje de error -->
+        <a href="../index.php">Volver a la página de inicio</a> <!-- Enlace para volver a la página de inicio -->
+    </div>
+
+</body>
+</html>

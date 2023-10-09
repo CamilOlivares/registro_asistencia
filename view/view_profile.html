@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Colegio Maria Auxiliadora</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<?php require "view/header.php" // Incluye el encabezado ?>
+
+<?php
+// Verifica si el usuario está autenticado
+if (isset($_SESSION["user_id"])) {
+    require "database.php"; // Requiere el archivo de conexión a la base de datos
+    $user_id = $_SESSION["user_id"]; // Obtiene el ID del usuario de la sesión
+    require "model/model_profile.php"; // Requiere el modelo para obtener los datos del perfil
+
+    echo "<h1>Mi Perfil</h1>";
+
+    if ($row) {
+        $nombre = $row['nombre'];
+        $apellido = $row['apellido'];
+        $usuario = $row['usuario'];
+        $email = $row['email'];
+
+        echo "
+        <div class='container'>
+            <div class='data-view'>
+                <h2>Datos de Perfil Actuales:</h2>
+                <table>
+                    <tr>
+                        <td><strong>Nombre:</strong></td>
+                        <td>$nombre</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apellido:</strong></td>
+                        <td>$apellido</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Usuario:</strong></td>
+                        <td>$usuario</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Correo Electrónico:</strong></td>
+                        <td>$email</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class='form-view'>
+                <h2>Actualizar Datos:</h2>
+                <form action='controller/update_profile.php' method='post'>
+                    <label for='nombre'>Nombre:</label>
+                    <input type='text' name='nombre' value='$nombre' required><br>
+                    <label for='apellido'>Apellido:</label>
+                    <input type='text' name='apellido' value='$apellido' required><br>
+                    <label for='usuario'>Usuario:</label>
+                    <input type='text' name='usuario' value='$usuario' required><br>
+                    <label for='email'>Correo electrónico:</label>
+                    <input type='email' name='email' value='$email' required><br>
+                    <input type='submit' value='Actualizar'>
+                </form>
+            </div>
+        </div>";
+    } else {
+        echo "No se encontraron datos de usuario.";
+    }
+} else {
+    echo "Debes iniciar sesión para acceder a esta página.";
+}
+?>
+<a href="controller/logout.php">Cerrar sesión</a> <!-- Enlace para cerrar sesión -->
+</body>
+</html>
